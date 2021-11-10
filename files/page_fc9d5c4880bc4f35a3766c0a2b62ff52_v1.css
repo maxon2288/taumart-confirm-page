@@ -1,0 +1,31 @@
+
+
+/* Start:/local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/style.css?1622642180672*/
+@media (max-width: 992px)
+{
+	.sale-personal-section-index-block {
+		height: auto;
+		margin: 8px 0;
+	}
+}
+
+.sale-personal-section-index-block.bx-theme-green{
+	background: url(/local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/images/wt_green.png) center top;
+}
+.sale-personal-section-index-block.bx-theme-blue{
+	background: url(/local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/images/wt_blue.png) center top;
+}
+.sale-personal-section-index-block.bx-theme-red{
+	background: url(/local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/images/wt_red.png) center top;
+}
+.sale-personal-section-index-block.bx-theme-yellow{
+	background: url(/local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/images/wt_yellow.png) center top;
+}
+.sale-personal-section-index-block.bx-theme-black{
+	background: url(/local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/images/wt_black.png) center top;
+}
+.sale-personal-section-index-block:hover{
+	opacity: 1;
+}
+/* End */
+/* /local/templates/retailv2/components/bitrix/sale.personal.section/bootstrap_v4/style.css?1622642180672 */
