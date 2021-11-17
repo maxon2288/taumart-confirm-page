@@ -161,7 +161,7 @@
     <link href="./files/template_49d0e31f3083ef6fa4e9271ee0580cbc_v1.css" type="text/css" data-template-style="true"
         rel="stylesheet">
 
-
+    <link rel="stylesheet" href="css/custom.css">
 
 
 
@@ -2806,56 +2806,41 @@
                     <span>Профиль</span>
                 </div>
             </div>
-            <div class="title_box" style="display:none;">
-                <h1>Запрос пароля</h1>
-            </div>
 
-            <form name="bform" method="post" target="_top"
-                action="https://taumart.ru/personal/private/?forgot_password=yes">
-                <input type="hidden" name="backurl" value="/personal/private/">
-                <input type="hidden" name="AUTH_FORM" value="Y">
-                <input type="hidden" name="TYPE" value="SEND_PWD">
-
-                <p>Выберите, какую информацию использовать для изменения пароля:</p>
-
-                <div style="margin-top: 16px">
-                    <div><b>Email:</b></div>
-                    <div>
-                        <input type="text" name="USER_LOGIN" value="">
-                        <input type="hidden" name="USER_EMAIL">
-                    </div>
-                    <div>Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по
-                        email.</div>
+            <form action="#" class="recovery recovery-form-1">
+                <div class="recovery__title">
+                    Восстановление пароля
                 </div>
+                <div class="recovery__content">
+                    <div class="recovery__field">
+                        <div class="recovery__field-title">
+                            Email:
+                        </div>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="recovery__desc">
+                        Cсылка для смены пароля будет отправлена на <br> указанную почту
+                    </div>
 
-
-                <div style="margin-top: 16px">
-                    <div>
-                        <input type="hidden" name="captcha_sid" value="06309af7b0f1fd1e3322fe3993390bcc">
-                        <div class="g-recaptcha" data-theme="light"
-                            data-sitekey="6Ldpnp4aAAAAAAprIM5-hvJxn3MnCBgQPDY2fSvi" data-size="normal"
-                            data-badge="bottomright" data-callback="RecaptchafreeSubmitForm" data-widget="0">
-                            <div style="width: 304px; height: 78px;">
-                                <div><iframe title="reCAPTCHA" src="./files/anchor.html" width="304" height="78"
-                                        role="presentation" name="a-wolfh29zzniq" frameborder="0" scrolling="no"
-                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
-                                </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                                    class="g-recaptcha-response"
-                                    style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                            </div>
+                    <img class="capcha" src="img/capcha.png" alt="">
+                    
+                    <div class="recovery__buttons">
+                        <button class="recovery__button-1">
+                            Сбросить пароль
+                        </button>
+                        <div class="recovery__button-2" data-popup="change-1">
+                            Изменить пароль по СМС
                         </div>
                     </div>
-                    <div>Введите символы с картинки:</div>
-                    <div><input type="text" name="captcha_word" style="display:none" value="6Ldpn" maxlength="50"></div>
-                </div>
-                <div style="margin-top: 20px">
-                    <input type="submit" name="send_account_info" value="Выслать">
+                    <a href="#" class="recovery__link" data-popup="sign">Авторизоваться</a>
                 </div>
             </form>
+            
+          
 
-            <div style="margin-top: 16px">
-                <p><a href="https://taumart.ru/personal/private/?login=yes"><b>Авторизация</b></a></p>
-            </div>
+           
+
+          
 
             <br>
         </div>
@@ -3336,6 +3321,133 @@
         <a itemprop="url" href="https://taumart.ru/">Тау-Март</a>
     </div>
 
+    <div class="m-popup__container">
+        <div class="m-popup popup popup-sign">
+            <form action="#" class="form-validate">
+                <div class="m-popup__close popup__close">
+                    <img src="img/m-popup-close.svg" alt="">
+                </div>
+                <div class="m-popup__title">
+                    Авторизация
+                </div>
+                <div class="m-popup__field">
+                    <div class="m-popup__field-title">
+                        Номер телефона
+                    </div>
+                    <input type="text" name="phone" class="phone-mask">
+                </div>
+                <div class="m-popup__field">
+                    <div class="m-popup__field-title">
+                        Пароль
+                    </div>
+                    <input type="password" name="password">
+                </div>
+                <div class="m-popup__forgot-container">
+                    <a href="#" class="m-popup__forgot">
+                        Забыли пароль
+                    </a>
+                </div>
+                <button class="m-popup__button">
+                    Войти
+                </button>
+                <div class="m-popup__button-sms" data-popup="sms">
+                    Войти по СМС
+                </div>
+                <div class="m-popup__bottom-text">
+                    У вас еще нет аккаунта? <a href="#">Зарегистрируйтесь</a>
+                </div>
+            </form>
+        </div>
+        <div class="sms2-trigger" data-popup="sms2">
+        </div>
+        <div class="m-popup popup popup-sms2">
+            <form action="#" class="form-validate-sms-2">
+                <div class="m-popup__close popup__close">
+                    <img src="img/m-popup-close.svg" alt="">
+                </div>
+                <div class="m-popup__title">
+                    Введите код из СМС
+                </div>
+                <div class="m-popup__field">
+                    <div class="m-popup__field-title">
+                        Номер телефона
+                    </div>
+                    <div class="m-popup__field-cont">
+                        <input type="text" name="phone" class="phone-mask" disabled value="+ 7 777 777 77 77">
+                        <a href="#" class="m-popup__field-link" data-popup="change-1">
+                            Изменить 
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="m-popup__field">
+                    <div class="m-popup__field-title">
+                        Пароль из СМС
+                    </div>
+                    <div class="m-popup__sms-code">
+                        <label class="m-popup-box"><input class="field" required name="code1" type="text" placeholder="•" /></label>
+                        <label class="m-popup-box"><input class="field" required name="code2" type="text" placeholder="•" /></label>
+                        <label class="m-popup-box"><input class="field" required name="code3" type="text" placeholder="•" /></label>
+                        <label class="m-popup-box"><input class="field" required name="code4" type="text" placeholder="•" /></label>
+                    </div>
+                </div>
+
+                <div class="m-popup__timer">
+                    Повторная отправка кода возможна через 0:<span class="time">30</span> сек
+                </div>
+                
+                <button class="m-popup__button-sms">
+                    Войти
+                </button>
+            </form>
+        </div>
+        <div class="m-popup popup popup-change-1">
+            <form action="#" class="form-change-1">
+                <div class="m-popup__close popup__close">
+                    <img src="img/m-popup-close.svg" alt="">
+                </div>
+                <div class="m-popup__title">
+                    Изменить пароль
+                </div>
+                <div class="m-popup__field">
+                    <div class="m-popup__field-title">
+                        Номер телефона
+                    </div>
+                    <div class="m-popup__field-cont">
+                        <input type="text" name="phone" class="phone-mask">
+                    </div>
+                    
+                </div>
+                <button class="m-popup__button-sms mt40">
+                    Получить код по СМС
+                </button>
+            </form>
+        </div>
+        <div class="change-password-trigger" data-popup="change-password"></div>
+        <div class="m-popup popup popup-change-password">
+            <form action="#" class="form-change-2">
+                <div class="m-popup__close popup__close">
+                    <img src="img/m-popup-close.svg" alt="">
+                </div>
+                <div class="m-popup__title">
+                    Изменить пароль
+                </div>
+                <div class="m-popup__field">
+                    <div class="m-popup__field-title">
+                        Новый пароль
+                    </div>
+                    <div class="m-popup__field-cont">
+                        <input type="password" name="password">
+                    </div>
+                    
+                </div>
+                <button class="m-popup__button mt40">
+                    Изменить
+                </button>
+            </form>
+        </div>
+    </div>
+
 
     <!-- JivoSite -->
     <script data-skip-moving="true">
@@ -3789,6 +3901,10 @@
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
                 style="width: 100%; height: 100%;"></iframe></div>
     </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.validate.js"></script>
+    <script type="text/javascript" src="./js/phone-mask.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
 </body>
 <div id="vimeo-record-extension"></div>
 
